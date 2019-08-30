@@ -30,6 +30,10 @@
     
     [tabBarController setViewControllers:[NSArray arrayWithObjects: newNavigationController, searchNavigationController, nil]];
     
+    [[UITabBarItem appearance] setTitleTextAttributes:@{
+                                                        NSFontAttributeName:[UIFont systemFontOfSize:15]
+                                                        } forState:UIControlStateNormal];
+    
     [self.window setBackgroundColor: [UIColor whiteColor]];
     [self.window makeKeyAndVisible];
     [self.window setRootViewController: tabBarController];
