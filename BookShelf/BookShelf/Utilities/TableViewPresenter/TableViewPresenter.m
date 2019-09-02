@@ -9,6 +9,7 @@
 #import "TableViewPresenter.h"
 #import "BookTableViewCell.h"
 
+
 @implementation TableViewPresenter
 
 - (instancetype)init {
@@ -19,8 +20,8 @@
     return self;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 145;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.delegate tableViewCellSelected:self.dataSource[indexPath.row].isbn13];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

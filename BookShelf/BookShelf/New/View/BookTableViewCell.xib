@@ -22,6 +22,7 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ifx-Gg-t2i">
                         <rect key="frame" x="0.0" y="0.0" width="120" height="144.5"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="144.5" id="7q6-vj-xqJ"/>
                             <constraint firstAttribute="width" constant="120" id="koQ-Pp-Ipn"/>
                         </constraints>
                     </imageView>

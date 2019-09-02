@@ -11,9 +11,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol TableViewPresenterDelegate
+
+@required
+- (void)tableViewCellSelected: (NSString *)isbn13;
+
+@end
+
 @interface TableViewPresenter : NSObject <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic) NSMutableArray<Book *> *dataSource;
+@property (nonatomic, weak) id<TableViewPresenterDelegate> delegate;
 
 @end
 
