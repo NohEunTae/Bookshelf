@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "NewViewController.h"
+#import "SearchViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,7 +25,7 @@
     NewViewController *newViewController = [[NewViewController alloc] init];
     UINavigationController *newNavigationController = [[UINavigationController alloc] initWithRootViewController:newViewController];
     
-    UIViewController *searchViewController = [[UIViewController alloc] init];
+    SearchViewController *searchViewController = [[SearchViewController alloc] init];
     UINavigationController *searchNavigationController = [[UINavigationController alloc] initWithRootViewController:searchViewController];
     searchNavigationController.tabBarItem.title = @"Seach";
     

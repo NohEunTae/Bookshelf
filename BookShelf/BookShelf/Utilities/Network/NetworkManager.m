@@ -43,8 +43,11 @@
 #pragma mark Request
 
 - (void)requestGetWithUrl:(NSString *)url with:(NSArray * __nullable)param withCompletionBlock:(void (^)(NetworkResult result, id __nullable data))completionBlock {
+    
     self.sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
-    [[self.sessionManager GET:url parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  __nullable responseObject) {
+    NSString *urlString = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+
+    [[self.sessionManager GET:urlString parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  __nullable responseObject) {
         completionBlock(Success, responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         completionBlock(Fail, nil);
@@ -52,20 +55,14 @@
     }] resume];
 }
 
-- (void)downloadImageWithUrl:(NSString *)url withCompletionBlock:(void (^)(NetworkResult result, id __nullable data))completionBlock {
-    NSURL *URL = [NSURL URLWithString:url];
-    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
-    self.sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    
-    [[self.sessionManager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
-        NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
-        return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
-    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
-        if (error == nil) {
-            completionBlock(Success, filePath);
-        } else {
-            completionBlock(Fail, nil);
-        }
+- (void)downloadImageWithUrl:(NSString *)url withCompletionBlock:(void (^)(NetworkResult result, id __nullable data))completionBlock {    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];;
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+
+    [[manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        completionBlock(Success, responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        completionBlock(Fail, nil);
     }] resume];
 }
 
