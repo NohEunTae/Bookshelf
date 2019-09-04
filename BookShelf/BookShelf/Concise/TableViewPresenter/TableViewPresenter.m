@@ -8,7 +8,7 @@
 
 #import "TableViewPresenter.h"
 #import "BookTableViewCell.h"
-
+#import "Book.h"
 
 @implementation TableViewPresenter
 
@@ -29,8 +29,21 @@
     if(cell == nil) {
         cell = [[BookTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"BookTableViewCell"];
     }
-    [cell configure: self.dataSource[indexPath.row]];
     
+    Book *book = self.dataSource[indexPath.row];
+    [cell configure:book];
+    if (book.imageData == nil) {
+        [book downloadImageCompletionBlock:^(NetworkResult result) {
+            switch (result) {
+                case Success: {
+                    [cell configure:book];
+                    break;
+                }
+                default:
+                    break;
+            }
+        }];
+    }
     return cell;
 }
 

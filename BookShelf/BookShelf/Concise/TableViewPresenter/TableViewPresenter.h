@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Book.h"
+@class Book;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol TableViewPresenterDelegate
 
 @required
-- (void)tableViewCellSelected: (NSString *)isbn13;
+- (void)tableViewCellSelected:(NSString *)isbn13;
 
 @end
 

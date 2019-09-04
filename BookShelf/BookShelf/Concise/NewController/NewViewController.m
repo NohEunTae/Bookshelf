@@ -10,8 +10,9 @@
 #import "TableViewPresenter.h"
 #import "NetworkManager.h"
 #import "DetailViewController.h"
+#import "Book.h"
 
-@interface NewViewController () <TableViewPresenterDelegate>
+@interface NewViewController () <TableViewPresenterDelegate, UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *bookTableView;
 @property (nonatomic) TableViewPresenter *presenter;
@@ -34,6 +35,7 @@
     self.navigationController.navigationBarHidden = YES;
     self.bookTableView.dataSource = self.presenter;
     self.bookTableView.delegate = self.presenter;
+
     self.presenter.delegate = self;
     UINib *nibCell = [UINib nibWithNibName:@"BookTableViewCell" bundle:nil];
     [self.bookTableView registerNib:nibCell forCellReuseIdentifier:@"BookTableViewCell"];
@@ -57,12 +59,35 @@
                     for (int i = 0; i < bookDic.count; i++) {
                         [self.presenter.dataSource addObject: [[Book alloc] initWithDictionary:bookDic[i]]];
                     }
+                    
+                    NSError *error = nil;
+                    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.presenter.dataSource requiringSecureCoding:YES error:&error];
+                    
+                    if (error) {
+                        NSLog(@"%@", error.localizedDescription);
+                    }
+                    
+                    [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"new"];
+                    [[NSUserDefaults standardUserDefaults] synchronize];
+
                     [self.bookTableView reloadData];
                 });
                 break;
             }
             case Fail: {
                 NSLog(@"[info] ... Network Connect Failed");
+                NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"new"];
+                NSError *error = nil;
+                
+                NSArray<Book *> *object = [NSKeyedUnarchiver unarchivedObjectOfClasses:[[NSSet alloc] initWithObjects:NSArray.self, Book.self, nil] fromData:data error:&error];
+                
+                if (error) {
+                    NSLog(@"%@", error.localizedDescription);
+                    return;
+                }
+                [self.presenter.dataSource setArray:object];
+                [self.bookTableView reloadData];
+
                 break;
             }
         }
@@ -72,6 +97,12 @@
 - (void)tableViewCellSelected:(nonnull NSString *)isbn13 {
     DetailViewController *detailViewController = [[DetailViewController alloc] initWithIsbn13:isbn13];
     [self.navigationController pushViewController:detailViewController animated:true];
+}
+
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.navigationItem.searchController.searchBar resignFirstResponder];
+    });
 }
 
 @end

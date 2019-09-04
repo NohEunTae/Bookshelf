@@ -8,6 +8,7 @@
 
 #import "BookTableViewCell.h"
 #import "NetworkManager.h"
+#import "Book.h"
 
 @interface BookTableViewCell()
 @property (weak, nonatomic) IBOutlet UIImageView *bookImageView;
@@ -40,22 +41,11 @@
     self.price.text = book.price;
     self.isbn13.text = book.isbn13;
     self.url.text = book.url;
-    
-    [NetworkManager.sharedInstance downloadImageWithUrl:book.image withCompletionBlock:^(NetworkResult result, id  _Nullable data) {
-        switch (result) {
-            case Success: {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    NSData *imageData = [NSData dataWithContentsOfURL:data];
-                    UIImage *img = [UIImage imageWithData:imageData];
-                    [self.bookImageView setImage:img];
-                    [self setNeedsLayout];
-                });
-                break;
-            }
-            case Fail:
-                break;
-        }
-    }];
+    if (book.imageData != nil) {
+        UIImage *img = [UIImage imageWithData:book.imageData];
+        [self.bookImageView setImage:img];
+    }
+    [self setNeedsLayout];
 }
 
 @end

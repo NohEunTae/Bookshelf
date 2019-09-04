@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Book.h"
+
+@class Book;
 
 NS_ASSUME_NONNULL_BEGIN
 
