@@ -41,6 +41,9 @@
 		CEEA34142319D5DC00C0304B /* PurchaseUrlTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEA34122319D5DC00C0304B /* PurchaseUrlTableViewCell.xib */; };
 		CEEA34192319DE1900C0304B /* IsbnTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA34172319DE1900C0304B /* IsbnTableViewCell.m */; };
 		CEEA341A2319DE1900C0304B /* IsbnTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEA34182319DE1900C0304B /* IsbnTableViewCell.xib */; };
+		CEEA341F231D4F0500C0304B /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA341D231D4F0500C0304B /* SearchViewController.m */; };
+		CEEA3420231D4F0500C0304B /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEA341E231D4F0500C0304B /* SearchViewController.xib */; };
+		CEEA3433231D855100C0304B /* PagingTableViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA3432231D855100C0304B /* PagingTableViewPresenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +114,11 @@
 		CEEA34162319DE1900C0304B /* IsbnTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IsbnTableViewCell.h; sourceTree = "<group>"; };
 		CEEA34172319DE1900C0304B /* IsbnTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IsbnTableViewCell.m; sourceTree = "<group>"; };
 		CEEA34182319DE1900C0304B /* IsbnTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IsbnTableViewCell.xib; sourceTree = "<group>"; };
+		CEEA341C231D4F0500C0304B /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		CEEA341D231D4F0500C0304B /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		CEEA341E231D4F0500C0304B /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		CEEA3431231D855100C0304B /* PagingTableViewPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PagingTableViewPresenter.h; sourceTree = "<group>"; };
+		CEEA3432231D855100C0304B /* PagingTableViewPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PagingTableViewPresenter.m; sourceTree = "<group>"; };
 		D6695693A03C41965FBDA3F4 /* libPods-BookShelf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BookShelf.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -175,7 +183,7 @@
 			children = (
 				CEEA33BD23192D5900C0304B /* Utilities */,
 				CEEA33DA2319571000C0304B /* Detail */,
-				CEEA33BC23192D4400C0304B /* New */,
+				CEEA33BC23192D4400C0304B /* Concise */,
 				CEEA33B923192CC200C0304B /* Support */,
 				CEEA33BB23192CFB00C0304B /* Resource */,
 				CEEA33BA23192CE000C0304B /* Launch */,
@@ -219,34 +227,35 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		CEEA33BC23192D4400C0304B /* New */ = {
+		CEEA33BC23192D4400C0304B /* Concise */ = {
 			isa = PBXGroup;
 			children = (
+				CEEA33D123193E8C00C0304B /* TableViewPresenter */,
 				CEEA33C023192D7F00C0304B /* Model */,
 				CEEA33BF23192D7A00C0304B /* View */,
-				CEEA33BE23192D6E00C0304B /* Controller */,
+				CEEA33BE23192D6E00C0304B /* NewController */,
+				CEEA341B231D4EE700C0304B /* SearchController */,
 			);
-			path = New;
+			path = Concise;
 			sourceTree = "<group>";
 		};
 		CEEA33BD23192D5900C0304B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				CEEA33D123193E8C00C0304B /* TableViewPresenter */,
 				CEEA33CA23193DBA00C0304B /* Coding */,
 				CEEA33C923193DB200C0304B /* Network */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		CEEA33BE23192D6E00C0304B /* Controller */ = {
+		CEEA33BE23192D6E00C0304B /* NewController */ = {
 			isa = PBXGroup;
 			children = (
 				CEEA33C123192F9800C0304B /* NewViewController.h */,
 				CEEA33C223192F9800C0304B /* NewViewController.m */,
 				CEEA33C323192F9800C0304B /* NewViewController.xib */,
 			);
-			path = Controller;
+			path = NewController;
 			sourceTree = "<group>";
 		};
 		CEEA33BF23192D7A00C0304B /* View */ = {
@@ -291,6 +300,8 @@
 			children = (
 				CEEA33D223193EA800C0304B /* TableViewPresenter.h */,
 				CEEA33D323193EA800C0304B /* TableViewPresenter.m */,
+				CEEA3431231D855100C0304B /* PagingTableViewPresenter.h */,
+				CEEA3432231D855100C0304B /* PagingTableViewPresenter.m */,
 			);
 			path = TableViewPresenter;
 			sourceTree = "<group>";
@@ -421,6 +432,16 @@
 			path = Isbn;
 			sourceTree = "<group>";
 		};
+		CEEA341B231D4EE700C0304B /* SearchController */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA341C231D4F0500C0304B /* SearchViewController.h */,
+				CEEA341D231D4F0500C0304B /* SearchViewController.m */,
+				CEEA341E231D4F0500C0304B /* SearchViewController.xib */,
+			);
+			path = SearchController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -508,6 +529,7 @@
 				CEEA34142319D5DC00C0304B /* PurchaseUrlTableViewCell.xib in Resources */,
 				CEEA33E02319575D00C0304B /* DetailViewController.xib in Resources */,
 				CEEA340D2319CF0100C0304B /* DescriptionTableViewCell.xib in Resources */,
+				CEEA3420231D4F0500C0304B /* SearchViewController.xib in Resources */,
 				CEEA33FC2319AF6600C0304B /* CollectionTableViewCell.xib in Resources */,
 				CEEA33F62319AA0B00C0304B /* DetailBookMultipleLineTableViewCell.xib in Resources */,
 				CEEA33C523192F9800C0304B /* NewViewController.xib in Resources */,
@@ -555,6 +577,7 @@
 			files = (
 				CEEA33CD23193DD700C0304B /* Coding.m in Sources */,
 				CEEA33E4231957CA00C0304B /* DetailBook.m in Sources */,
+				CEEA341F231D4F0500C0304B /* SearchViewController.m in Sources */,
 				CEEA33C823193D1D00C0304B /* NetworkManager.m in Sources */,
 				CEEA33DF2319575D00C0304B /* DetailViewController.m in Sources */,
 				CEEA33C423192F9800C0304B /* NewViewController.m in Sources */,
@@ -565,6 +588,7 @@
 				CEEA34062319C53700C0304B /* RatingTableViewCell.m in Sources */,
 				CEEA33D823193F3100C0304B /* BookTableViewCell.m in Sources */,
 				CEEA33D423193EA800C0304B /* TableViewPresenter.m in Sources */,
+				CEEA3433231D855100C0304B /* PagingTableViewPresenter.m in Sources */,
 				CEEA33D023193E2900C0304B /* Book.m in Sources */,
 				CEEA33EA23197A6B00C0304B /* BookImageTableViewCell.m in Sources */,
 				CEEA33EF23197B6200C0304B /* DetailBookPresenter.m in Sources */,

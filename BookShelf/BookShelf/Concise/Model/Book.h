@@ -8,12 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "Coding.h"
+#import "NetworkManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Book : Coding
 
 @property (nonatomic) NSString *title, *subtitle, *isbn13, *price, *url, *image;
+@property (nonatomic) NSData *imageData;
+
+- (void)downloadImageCompletionBlock:(void (^)(NetworkResult result))completionBlock;
 
 @end
 
