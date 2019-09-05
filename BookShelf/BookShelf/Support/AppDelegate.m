@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "NewViewController.h"
+#import "SearchViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,27 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    
+    NewViewController *newViewController = [[NewViewController alloc] init];
+    UINavigationController *newNavigationController = [[UINavigationController alloc] initWithRootViewController:newViewController];
+    
+    SearchViewController *searchViewController = [[SearchViewController alloc] init];
+    UINavigationController *searchNavigationController = [[UINavigationController alloc] initWithRootViewController:searchViewController];
+    searchNavigationController.tabBarItem.title = @"Seach";
+    
+    [tabBarController setViewControllers:[NSArray arrayWithObjects: newNavigationController, searchNavigationController, nil]];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{
+                                                        NSFontAttributeName:[UIFont systemFontOfSize:15]
+                                                        } forState:UIControlStateNormal];
+    
+    [self.window setBackgroundColor: [UIColor whiteColor]];
+    [self.window makeKeyAndVisible];
+    [self.window setRootViewController: tabBarController];
+    
     return YES;
 }
 

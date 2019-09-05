@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NewViewController.h
 //  BookShelf
 //
 //  Created by user on 30/08/2019.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface NewViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

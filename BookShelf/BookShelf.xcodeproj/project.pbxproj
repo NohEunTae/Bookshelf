@@ -7,13 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A156A0AFBC3DBAF811E0F088 /* libPods-BookShelf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6695693A03C41965FBDA3F4 /* libPods-BookShelf.a */; };
+		CE490B9423204087006373AA /* CachingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE490B9323204087006373AA /* CachingManager.m */; };
 		CEEA339723192A2900C0304B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA339623192A2900C0304B /* AppDelegate.m */; };
-		CEEA339A23192A2900C0304B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA339923192A2900C0304B /* ViewController.m */; };
-		CEEA339D23192A2900C0304B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEA339B23192A2900C0304B /* Main.storyboard */; };
 		CEEA339F23192A2A00C0304B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEEA339E23192A2A00C0304B /* Assets.xcassets */; };
 		CEEA33A223192A2A00C0304B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEA33A023192A2A00C0304B /* LaunchScreen.storyboard */; };
 		CEEA33A523192A2A00C0304B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA33A423192A2A00C0304B /* main.m */; };
 		CEEA33AF23192A2A00C0304B /* BookShelfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA33AE23192A2A00C0304B /* BookShelfTests.m */; };
+		CEEA33C423192F9800C0304B /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA33C223192F9800C0304B /* NewViewController.m */; };
+		CEEA33C523192F9800C0304B /* NewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEA33C323192F9800C0304B /* NewViewController.xib */; };
+		CEEA33C823193D1D00C0304B /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA33C723193D1D00C0304B /* NetworkManager.m */; };
+		CEEA33CD23193DD700C0304B /* Coding.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA33CC23193DD700C0304B /* Coding.m */; };
+		CEEA33D023193E2900C0304B /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA33CF23193E2900C0304B /* Book.m */; };
+		CEEA33D423193EA800C0304B /* TableViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA33D323193EA800C0304B /* TableViewPresenter.m */; };
+		CEEA33D823193F3100C0304B /* BookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA33D623193F3100C0304B /* BookTableViewCell.m */; };
+		CEEA33D923193F3100C0304B /* BookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEA33D723193F3100C0304B /* BookTableViewCell.xib */; };
+		CEEA33DF2319575D00C0304B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA33DD2319575D00C0304B /* DetailViewController.m */; };
+		CEEA33E02319575D00C0304B /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEA33DE2319575D00C0304B /* DetailViewController.xib */; };
+		CEEA33E4231957CA00C0304B /* DetailBook.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA33E3231957CA00C0304B /* DetailBook.m */; };
+		CEEA33EA23197A6B00C0304B /* BookImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA33E823197A6B00C0304B /* BookImageTableViewCell.m */; };
+		CEEA33EB23197A6B00C0304B /* BookImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEA33E923197A6B00C0304B /* BookImageTableViewCell.xib */; };
+		CEEA33EF23197B6200C0304B /* DetailBookPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA33EE23197B6200C0304B /* DetailBookPresenter.m */; };
+		CEEA33F52319AA0B00C0304B /* DetailBookMultipleLineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA33F32319AA0B00C0304B /* DetailBookMultipleLineTableViewCell.m */; };
+		CEEA33F62319AA0B00C0304B /* DetailBookMultipleLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEA33F42319AA0B00C0304B /* DetailBookMultipleLineTableViewCell.xib */; };
+		CEEA33FB2319AF6600C0304B /* CollectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA33F92319AF6600C0304B /* CollectionTableViewCell.m */; };
+		CEEA33FC2319AF6600C0304B /* CollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEA33FA2319AF6600C0304B /* CollectionTableViewCell.xib */; };
+		CEEA34002319AFB700C0304B /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA33FE2319AFB700C0304B /* CollectionViewCell.m */; };
+		CEEA34012319AFB700C0304B /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEA33FF2319AFB700C0304B /* CollectionViewCell.xib */; };
+		CEEA34062319C53700C0304B /* RatingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA34042319C53700C0304B /* RatingTableViewCell.m */; };
+		CEEA34072319C53700C0304B /* RatingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEA34052319C53700C0304B /* RatingTableViewCell.xib */; };
+		CEEA340C2319CF0100C0304B /* DescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA340A2319CF0100C0304B /* DescriptionTableViewCell.m */; };
+		CEEA340D2319CF0100C0304B /* DescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEA340B2319CF0100C0304B /* DescriptionTableViewCell.xib */; };
+		CEEA34132319D5DC00C0304B /* PurchaseUrlTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA34112319D5DC00C0304B /* PurchaseUrlTableViewCell.m */; };
+		CEEA34142319D5DC00C0304B /* PurchaseUrlTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEA34122319D5DC00C0304B /* PurchaseUrlTableViewCell.xib */; };
+		CEEA34192319DE1900C0304B /* IsbnTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA34172319DE1900C0304B /* IsbnTableViewCell.m */; };
+		CEEA341A2319DE1900C0304B /* IsbnTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEA34182319DE1900C0304B /* IsbnTableViewCell.xib */; };
+		CEEA341F231D4F0500C0304B /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA341D231D4F0500C0304B /* SearchViewController.m */; };
+		CEEA3420231D4F0500C0304B /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEA341E231D4F0500C0304B /* SearchViewController.xib */; };
+		CEEA3433231D855100C0304B /* PagingTableViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA3432231D855100C0304B /* PagingTableViewPresenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,12 +58,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9EB9B519FC112B5F911FF2AF /* Pods-BookShelf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookShelf.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookShelf/Pods-BookShelf.debug.xcconfig"; sourceTree = "<group>"; };
+		A96FC77E1D017F6E4FAB067D /* Pods-BookShelf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookShelf.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookShelf/Pods-BookShelf.release.xcconfig"; sourceTree = "<group>"; };
+		CE490B9223204087006373AA /* CachingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CachingManager.h; sourceTree = "<group>"; };
+		CE490B9323204087006373AA /* CachingManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CachingManager.m; sourceTree = "<group>"; };
 		CEEA339223192A2900C0304B /* BookShelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookShelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEA339523192A2900C0304B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CEEA339623192A2900C0304B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CEEA339823192A2900C0304B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CEEA339923192A2900C0304B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CEEA339C23192A2900C0304B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEEA339E23192A2A00C0304B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEEA33A123192A2A00C0304B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEEA33A323192A2A00C0304B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,6 +72,57 @@
 		CEEA33AA23192A2A00C0304B /* BookShelfTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookShelfTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEA33AE23192A2A00C0304B /* BookShelfTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookShelfTests.m; sourceTree = "<group>"; };
 		CEEA33B023192A2A00C0304B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEEA33C123192F9800C0304B /* NewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
+		CEEA33C223192F9800C0304B /* NewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
+		CEEA33C323192F9800C0304B /* NewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewViewController.xib; sourceTree = "<group>"; };
+		CEEA33C623193D1D00C0304B /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		CEEA33C723193D1D00C0304B /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		CEEA33CB23193DD700C0304B /* Coding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Coding.h; sourceTree = "<group>"; };
+		CEEA33CC23193DD700C0304B /* Coding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Coding.m; sourceTree = "<group>"; };
+		CEEA33CE23193E2900C0304B /* Book.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		CEEA33CF23193E2900C0304B /* Book.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		CEEA33D223193EA800C0304B /* TableViewPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewPresenter.h; sourceTree = "<group>"; };
+		CEEA33D323193EA800C0304B /* TableViewPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewPresenter.m; sourceTree = "<group>"; };
+		CEEA33D523193F3100C0304B /* BookTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookTableViewCell.h; sourceTree = "<group>"; };
+		CEEA33D623193F3100C0304B /* BookTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookTableViewCell.m; sourceTree = "<group>"; };
+		CEEA33D723193F3100C0304B /* BookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookTableViewCell.xib; sourceTree = "<group>"; };
+		CEEA33DC2319575D00C0304B /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		CEEA33DD2319575D00C0304B /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		CEEA33DE2319575D00C0304B /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		CEEA33E2231957CA00C0304B /* DetailBook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailBook.h; sourceTree = "<group>"; };
+		CEEA33E3231957CA00C0304B /* DetailBook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailBook.m; sourceTree = "<group>"; };
+		CEEA33E723197A6B00C0304B /* BookImageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookImageTableViewCell.h; sourceTree = "<group>"; };
+		CEEA33E823197A6B00C0304B /* BookImageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookImageTableViewCell.m; sourceTree = "<group>"; };
+		CEEA33E923197A6B00C0304B /* BookImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookImageTableViewCell.xib; sourceTree = "<group>"; };
+		CEEA33ED23197B6200C0304B /* DetailBookPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailBookPresenter.h; sourceTree = "<group>"; };
+		CEEA33EE23197B6200C0304B /* DetailBookPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailBookPresenter.m; sourceTree = "<group>"; };
+		CEEA33F22319AA0B00C0304B /* DetailBookMultipleLineTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailBookMultipleLineTableViewCell.h; sourceTree = "<group>"; };
+		CEEA33F32319AA0B00C0304B /* DetailBookMultipleLineTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailBookMultipleLineTableViewCell.m; sourceTree = "<group>"; };
+		CEEA33F42319AA0B00C0304B /* DetailBookMultipleLineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailBookMultipleLineTableViewCell.xib; sourceTree = "<group>"; };
+		CEEA33F82319AF6600C0304B /* CollectionTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionTableViewCell.h; sourceTree = "<group>"; };
+		CEEA33F92319AF6600C0304B /* CollectionTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionTableViewCell.m; sourceTree = "<group>"; };
+		CEEA33FA2319AF6600C0304B /* CollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionTableViewCell.xib; sourceTree = "<group>"; };
+		CEEA33FD2319AFB700C0304B /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		CEEA33FE2319AFB700C0304B /* CollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		CEEA33FF2319AFB700C0304B /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		CEEA34032319C53700C0304B /* RatingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RatingTableViewCell.h; sourceTree = "<group>"; };
+		CEEA34042319C53700C0304B /* RatingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RatingTableViewCell.m; sourceTree = "<group>"; };
+		CEEA34052319C53700C0304B /* RatingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingTableViewCell.xib; sourceTree = "<group>"; };
+		CEEA34092319CF0100C0304B /* DescriptionTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DescriptionTableViewCell.h; sourceTree = "<group>"; };
+		CEEA340A2319CF0100C0304B /* DescriptionTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DescriptionTableViewCell.m; sourceTree = "<group>"; };
+		CEEA340B2319CF0100C0304B /* DescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		CEEA34102319D5DC00C0304B /* PurchaseUrlTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PurchaseUrlTableViewCell.h; sourceTree = "<group>"; };
+		CEEA34112319D5DC00C0304B /* PurchaseUrlTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PurchaseUrlTableViewCell.m; sourceTree = "<group>"; };
+		CEEA34122319D5DC00C0304B /* PurchaseUrlTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseUrlTableViewCell.xib; sourceTree = "<group>"; };
+		CEEA34162319DE1900C0304B /* IsbnTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IsbnTableViewCell.h; sourceTree = "<group>"; };
+		CEEA34172319DE1900C0304B /* IsbnTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IsbnTableViewCell.m; sourceTree = "<group>"; };
+		CEEA34182319DE1900C0304B /* IsbnTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IsbnTableViewCell.xib; sourceTree = "<group>"; };
+		CEEA341C231D4F0500C0304B /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		CEEA341D231D4F0500C0304B /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		CEEA341E231D4F0500C0304B /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		CEEA3431231D855100C0304B /* PagingTableViewPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PagingTableViewPresenter.h; sourceTree = "<group>"; };
+		CEEA3432231D855100C0304B /* PagingTableViewPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PagingTableViewPresenter.m; sourceTree = "<group>"; };
+		D6695693A03C41965FBDA3F4 /* libPods-BookShelf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BookShelf.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A156A0AFBC3DBAF811E0F088 /* libPods-BookShelf.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +144,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CB36CDC15EC3E5C26496947 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6695693A03C41965FBDA3F4 /* libPods-BookShelf.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		854FD0FC5CA1C60049EDDD61 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9EB9B519FC112B5F911FF2AF /* Pods-BookShelf.debug.xcconfig */,
+				A96FC77E1D017F6E4FAB067D /* Pods-BookShelf.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE490B9123204066006373AA /* Caching */ = {
+			isa = PBXGroup;
+			children = (
+				CE490B9223204087006373AA /* CachingManager.h */,
+				CE490B9323204087006373AA /* CachingManager.m */,
+			);
+			path = Caching;
+			sourceTree = "<group>";
+		};
 		CEEA338923192A2900C0304B = {
 			isa = PBXGroup;
 			children = (
 				CEEA339423192A2900C0304B /* BookShelf */,
 				CEEA33AD23192A2A00C0304B /* BookShelfTests */,
 				CEEA339323192A2900C0304B /* Products */,
+				854FD0FC5CA1C60049EDDD61 /* Pods */,
+				2CB36CDC15EC3E5C26496947 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,15 +193,12 @@
 		CEEA339423192A2900C0304B /* BookShelf */ = {
 			isa = PBXGroup;
 			children = (
-				CEEA339523192A2900C0304B /* AppDelegate.h */,
-				CEEA339623192A2900C0304B /* AppDelegate.m */,
-				CEEA339823192A2900C0304B /* ViewController.h */,
-				CEEA339923192A2900C0304B /* ViewController.m */,
-				CEEA339B23192A2900C0304B /* Main.storyboard */,
-				CEEA339E23192A2A00C0304B /* Assets.xcassets */,
-				CEEA33A023192A2A00C0304B /* LaunchScreen.storyboard */,
-				CEEA33A323192A2A00C0304B /* Info.plist */,
-				CEEA33A423192A2A00C0304B /* main.m */,
+				CEEA33BD23192D5900C0304B /* Utilities */,
+				CEEA33DA2319571000C0304B /* Detail */,
+				CEEA33BC23192D4400C0304B /* Concise */,
+				CEEA33B923192CC200C0304B /* Support */,
+				CEEA33BB23192CFB00C0304B /* Resource */,
+				CEEA33BA23192CE000C0304B /* Launch */,
 			);
 			path = BookShelf;
 			sourceTree = "<group>";
@@ -103,6 +212,249 @@
 			path = BookShelfTests;
 			sourceTree = "<group>";
 		};
+		CEEA33B923192CC200C0304B /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA339523192A2900C0304B /* AppDelegate.h */,
+				CEEA339623192A2900C0304B /* AppDelegate.m */,
+				CEEA33A323192A2A00C0304B /* Info.plist */,
+				CEEA33A423192A2A00C0304B /* main.m */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		CEEA33BA23192CE000C0304B /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA33A023192A2A00C0304B /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		CEEA33BB23192CFB00C0304B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA339E23192A2A00C0304B /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		CEEA33BC23192D4400C0304B /* Concise */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA33D123193E8C00C0304B /* TableViewPresenter */,
+				CEEA33C023192D7F00C0304B /* Model */,
+				CEEA33BF23192D7A00C0304B /* View */,
+				CEEA33BE23192D6E00C0304B /* NewController */,
+				CEEA341B231D4EE700C0304B /* SearchController */,
+			);
+			path = Concise;
+			sourceTree = "<group>";
+		};
+		CEEA33BD23192D5900C0304B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CE490B9123204066006373AA /* Caching */,
+				CEEA33CA23193DBA00C0304B /* Coding */,
+				CEEA33C923193DB200C0304B /* Network */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CEEA33BE23192D6E00C0304B /* NewController */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA33C123192F9800C0304B /* NewViewController.h */,
+				CEEA33C223192F9800C0304B /* NewViewController.m */,
+				CEEA33C323192F9800C0304B /* NewViewController.xib */,
+			);
+			path = NewController;
+			sourceTree = "<group>";
+		};
+		CEEA33BF23192D7A00C0304B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA33D523193F3100C0304B /* BookTableViewCell.h */,
+				CEEA33D623193F3100C0304B /* BookTableViewCell.m */,
+				CEEA33D723193F3100C0304B /* BookTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CEEA33C023192D7F00C0304B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA33CE23193E2900C0304B /* Book.h */,
+				CEEA33CF23193E2900C0304B /* Book.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEEA33C923193DB200C0304B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA33C623193D1D00C0304B /* NetworkManager.h */,
+				CEEA33C723193D1D00C0304B /* NetworkManager.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CEEA33CA23193DBA00C0304B /* Coding */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA33CB23193DD700C0304B /* Coding.h */,
+				CEEA33CC23193DD700C0304B /* Coding.m */,
+			);
+			path = Coding;
+			sourceTree = "<group>";
+		};
+		CEEA33D123193E8C00C0304B /* TableViewPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA33D223193EA800C0304B /* TableViewPresenter.h */,
+				CEEA33D323193EA800C0304B /* TableViewPresenter.m */,
+				CEEA3431231D855100C0304B /* PagingTableViewPresenter.h */,
+				CEEA3432231D855100C0304B /* PagingTableViewPresenter.m */,
+			);
+			path = TableViewPresenter;
+			sourceTree = "<group>";
+		};
+		CEEA33DA2319571000C0304B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA33EC23197B4600C0304B /* TableViewPresenter */,
+				CEEA33E1231957B300C0304B /* Model */,
+				CEEA33E523197A3B00C0304B /* View */,
+				CEEA33DB2319574000C0304B /* Controller */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		CEEA33DB2319574000C0304B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA33DC2319575D00C0304B /* DetailViewController.h */,
+				CEEA33DD2319575D00C0304B /* DetailViewController.m */,
+				CEEA33DE2319575D00C0304B /* DetailViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEEA33E1231957B300C0304B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA33E2231957CA00C0304B /* DetailBook.h */,
+				CEEA33E3231957CA00C0304B /* DetailBook.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEEA33E523197A3B00C0304B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA34152319DE0300C0304B /* Isbn */,
+				CEEA340E2319D58200C0304B /* PurchaseUrl */,
+				CEEA34082319CEEE00C0304B /* Description */,
+				CEEA34022319C51E00C0304B /* Rating */,
+				CEEA33F72319AF5400C0304B /* Collection */,
+				CEEA33F12319A91700C0304B /* MultipleLine */,
+				CEEA33F02319A90F00C0304B /* Image */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CEEA33EC23197B4600C0304B /* TableViewPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA33ED23197B6200C0304B /* DetailBookPresenter.h */,
+				CEEA33EE23197B6200C0304B /* DetailBookPresenter.m */,
+			);
+			path = TableViewPresenter;
+			sourceTree = "<group>";
+		};
+		CEEA33F02319A90F00C0304B /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA33E723197A6B00C0304B /* BookImageTableViewCell.h */,
+				CEEA33E823197A6B00C0304B /* BookImageTableViewCell.m */,
+				CEEA33E923197A6B00C0304B /* BookImageTableViewCell.xib */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		CEEA33F12319A91700C0304B /* MultipleLine */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA33F22319AA0B00C0304B /* DetailBookMultipleLineTableViewCell.h */,
+				CEEA33F32319AA0B00C0304B /* DetailBookMultipleLineTableViewCell.m */,
+				CEEA33F42319AA0B00C0304B /* DetailBookMultipleLineTableViewCell.xib */,
+			);
+			path = MultipleLine;
+			sourceTree = "<group>";
+		};
+		CEEA33F72319AF5400C0304B /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA33F82319AF6600C0304B /* CollectionTableViewCell.h */,
+				CEEA33F92319AF6600C0304B /* CollectionTableViewCell.m */,
+				CEEA33FA2319AF6600C0304B /* CollectionTableViewCell.xib */,
+				CEEA33FD2319AFB700C0304B /* CollectionViewCell.h */,
+				CEEA33FE2319AFB700C0304B /* CollectionViewCell.m */,
+				CEEA33FF2319AFB700C0304B /* CollectionViewCell.xib */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		CEEA34022319C51E00C0304B /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA34032319C53700C0304B /* RatingTableViewCell.h */,
+				CEEA34042319C53700C0304B /* RatingTableViewCell.m */,
+				CEEA34052319C53700C0304B /* RatingTableViewCell.xib */,
+			);
+			path = Rating;
+			sourceTree = "<group>";
+		};
+		CEEA34082319CEEE00C0304B /* Description */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA34092319CF0100C0304B /* DescriptionTableViewCell.h */,
+				CEEA340A2319CF0100C0304B /* DescriptionTableViewCell.m */,
+				CEEA340B2319CF0100C0304B /* DescriptionTableViewCell.xib */,
+			);
+			path = Description;
+			sourceTree = "<group>";
+		};
+		CEEA340E2319D58200C0304B /* PurchaseUrl */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA34102319D5DC00C0304B /* PurchaseUrlTableViewCell.h */,
+				CEEA34112319D5DC00C0304B /* PurchaseUrlTableViewCell.m */,
+				CEEA34122319D5DC00C0304B /* PurchaseUrlTableViewCell.xib */,
+			);
+			path = PurchaseUrl;
+			sourceTree = "<group>";
+		};
+		CEEA34152319DE0300C0304B /* Isbn */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA34162319DE1900C0304B /* IsbnTableViewCell.h */,
+				CEEA34172319DE1900C0304B /* IsbnTableViewCell.m */,
+				CEEA34182319DE1900C0304B /* IsbnTableViewCell.xib */,
+			);
+			path = Isbn;
+			sourceTree = "<group>";
+		};
+		CEEA341B231D4EE700C0304B /* SearchController */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA341C231D4F0500C0304B /* SearchViewController.h */,
+				CEEA341D231D4F0500C0304B /* SearchViewController.m */,
+				CEEA341E231D4F0500C0304B /* SearchViewController.xib */,
+			);
+			path = SearchController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,6 +462,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEEA33B323192A2A00C0304B /* Build configuration list for PBXNativeTarget "BookShelf" */;
 			buildPhases = (
+				2649165F09382DAE379A5EC8 /* [CP] Check Pods Manifest.lock */,
 				CEEA338E23192A2900C0304B /* Sources */,
 				CEEA338F23192A2900C0304B /* Frameworks */,
 				CEEA339023192A2900C0304B /* Resources */,
@@ -183,9 +536,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEEA33D923193F3100C0304B /* BookTableViewCell.xib in Resources */,
+				CEEA341A2319DE1900C0304B /* IsbnTableViewCell.xib in Resources */,
 				CEEA33A223192A2A00C0304B /* LaunchScreen.storyboard in Resources */,
+				CEEA34142319D5DC00C0304B /* PurchaseUrlTableViewCell.xib in Resources */,
+				CEEA33E02319575D00C0304B /* DetailViewController.xib in Resources */,
+				CEEA340D2319CF0100C0304B /* DescriptionTableViewCell.xib in Resources */,
+				CEEA3420231D4F0500C0304B /* SearchViewController.xib in Resources */,
+				CEEA33FC2319AF6600C0304B /* CollectionTableViewCell.xib in Resources */,
+				CEEA33F62319AA0B00C0304B /* DetailBookMultipleLineTableViewCell.xib in Resources */,
+				CEEA33C523192F9800C0304B /* NewViewController.xib in Resources */,
+				CEEA34072319C53700C0304B /* RatingTableViewCell.xib in Resources */,
+				CEEA33EB23197A6B00C0304B /* BookImageTableViewCell.xib in Resources */,
 				CEEA339F23192A2A00C0304B /* Assets.xcassets in Resources */,
-				CEEA339D23192A2900C0304B /* Main.storyboard in Resources */,
+				CEEA34012319AFB700C0304B /* CollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,14 +562,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2649165F09382DAE379A5EC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BookShelf-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CEEA338E23192A2900C0304B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEEA339A23192A2900C0304B /* ViewController.m in Sources */,
+				CEEA33CD23193DD700C0304B /* Coding.m in Sources */,
+				CE490B9423204087006373AA /* CachingManager.m in Sources */,
+				CEEA33E4231957CA00C0304B /* DetailBook.m in Sources */,
+				CEEA341F231D4F0500C0304B /* SearchViewController.m in Sources */,
+				CEEA33C823193D1D00C0304B /* NetworkManager.m in Sources */,
+				CEEA33DF2319575D00C0304B /* DetailViewController.m in Sources */,
+				CEEA33C423192F9800C0304B /* NewViewController.m in Sources */,
+				CEEA34192319DE1900C0304B /* IsbnTableViewCell.m in Sources */,
+				CEEA33FB2319AF6600C0304B /* CollectionTableViewCell.m in Sources */,
+				CEEA34002319AFB700C0304B /* CollectionViewCell.m in Sources */,
 				CEEA33A523192A2A00C0304B /* main.m in Sources */,
+				CEEA34062319C53700C0304B /* RatingTableViewCell.m in Sources */,
+				CEEA33D823193F3100C0304B /* BookTableViewCell.m in Sources */,
+				CEEA33D423193EA800C0304B /* TableViewPresenter.m in Sources */,
+				CEEA3433231D855100C0304B /* PagingTableViewPresenter.m in Sources */,
+				CEEA33D023193E2900C0304B /* Book.m in Sources */,
+				CEEA33EA23197A6B00C0304B /* BookImageTableViewCell.m in Sources */,
+				CEEA33EF23197B6200C0304B /* DetailBookPresenter.m in Sources */,
+				CEEA34132319D5DC00C0304B /* PurchaseUrlTableViewCell.m in Sources */,
 				CEEA339723192A2900C0304B /* AppDelegate.m in Sources */,
+				CEEA33F52319AA0B00C0304B /* DetailBookMultipleLineTableViewCell.m in Sources */,
+				CEEA340C2319CF0100C0304B /* DescriptionTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,14 +632,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CEEA339B23192A2900C0304B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CEEA339C23192A2900C0304B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CEEA33A023192A2A00C0304B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -361,11 +757,12 @@
 		};
 		CEEA33B423192A2A00C0304B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EB9B519FC112B5F911FF2AF /* Pods-BookShelf.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32W5JEHP8L;
-				INFOPLIST_FILE = BookShelf/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BookShelf/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,11 +775,12 @@
 		};
 		CEEA33B523192A2A00C0304B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A96FC77E1D017F6E4FAB067D /* Pods-BookShelf.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32W5JEHP8L;
-				INFOPLIST_FILE = BookShelf/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BookShelf/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
