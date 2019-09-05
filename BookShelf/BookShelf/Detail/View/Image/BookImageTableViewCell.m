@@ -31,8 +31,7 @@
         switch (result) {
             case Success: {
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    NSData *imageData = [NSData dataWithContentsOfURL:data];
-                    UIImage *img = [UIImage imageWithData:imageData];
+                    UIImage *img = [UIImage imageWithData:data];
                     [self.bookImageView setImage:img];
                     [self setNeedsLayout];
                 });
