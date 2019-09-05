@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A156A0AFBC3DBAF811E0F088 /* libPods-BookShelf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6695693A03C41965FBDA3F4 /* libPods-BookShelf.a */; };
+		CE490B9423204087006373AA /* CachingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE490B9323204087006373AA /* CachingManager.m */; };
 		CEEA339723192A2900C0304B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA339623192A2900C0304B /* AppDelegate.m */; };
 		CEEA339F23192A2A00C0304B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEEA339E23192A2A00C0304B /* Assets.xcassets */; };
 		CEEA33A223192A2A00C0304B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEA33A023192A2A00C0304B /* LaunchScreen.storyboard */; };
@@ -59,6 +60,8 @@
 /* Begin PBXFileReference section */
 		9EB9B519FC112B5F911FF2AF /* Pods-BookShelf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookShelf.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookShelf/Pods-BookShelf.debug.xcconfig"; sourceTree = "<group>"; };
 		A96FC77E1D017F6E4FAB067D /* Pods-BookShelf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookShelf.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookShelf/Pods-BookShelf.release.xcconfig"; sourceTree = "<group>"; };
+		CE490B9223204087006373AA /* CachingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CachingManager.h; sourceTree = "<group>"; };
+		CE490B9323204087006373AA /* CachingManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CachingManager.m; sourceTree = "<group>"; };
 		CEEA339223192A2900C0304B /* BookShelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookShelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEA339523192A2900C0304B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CEEA339623192A2900C0304B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -158,6 +161,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CE490B9123204066006373AA /* Caching */ = {
+			isa = PBXGroup;
+			children = (
+				CE490B9223204087006373AA /* CachingManager.h */,
+				CE490B9323204087006373AA /* CachingManager.m */,
+			);
+			path = Caching;
+			sourceTree = "<group>";
+		};
 		CEEA338923192A2900C0304B = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +254,7 @@
 		CEEA33BD23192D5900C0304B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				CE490B9123204066006373AA /* Caching */,
 				CEEA33CA23193DBA00C0304B /* Coding */,
 				CEEA33C923193DB200C0304B /* Network */,
 			);
@@ -309,6 +322,7 @@
 		CEEA33DA2319571000C0304B /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				CEEA33EC23197B4600C0304B /* TableViewPresenter */,
 				CEEA33E1231957B300C0304B /* Model */,
 				CEEA33E523197A3B00C0304B /* View */,
 				CEEA33DB2319574000C0304B /* Controller */,
@@ -319,7 +333,6 @@
 		CEEA33DB2319574000C0304B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CEEA33EC23197B4600C0304B /* TableViewPresenter */,
 				CEEA33DC2319575D00C0304B /* DetailViewController.h */,
 				CEEA33DD2319575D00C0304B /* DetailViewController.m */,
 				CEEA33DE2319575D00C0304B /* DetailViewController.xib */,
@@ -576,6 +589,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEEA33CD23193DD700C0304B /* Coding.m in Sources */,
+				CE490B9423204087006373AA /* CachingManager.m in Sources */,
 				CEEA33E4231957CA00C0304B /* DetailBook.m in Sources */,
 				CEEA341F231D4F0500C0304B /* SearchViewController.m in Sources */,
 				CEEA33C823193D1D00C0304B /* NetworkManager.m in Sources */,

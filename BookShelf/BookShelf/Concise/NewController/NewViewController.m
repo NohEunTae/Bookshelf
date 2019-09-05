@@ -9,6 +9,7 @@
 #import "NewViewController.h"
 #import "TableViewPresenter.h"
 #import "NetworkManager.h"
+#import "CachingManager.h"
 #import "DetailViewController.h"
 #import "Book.h"
 
@@ -54,38 +55,20 @@
         
         switch (result) {
             case Success: {
-                dispatch_async(dispatch_get_main_queue(), ^{
                     NSArray<NSDictionary *> *bookDic = data[@"books"];
                     for (int i = 0; i < bookDic.count; i++) {
                         [self.presenter.dataSource addObject: [[Book alloc] initWithDictionary:bookDic[i]]];
                     }
                     
-                    NSError *error = nil;
-                    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.presenter.dataSource requiringSecureCoding:YES error:&error];
-                    
-                    if (error) {
-                        NSLog(@"%@", error.localizedDescription);
-                    }
-                    
-                    [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"new"];
-                    [[NSUserDefaults standardUserDefaults] synchronize];
-
+                    [CachingManager.sharedInstance archivedDataWithRootObject:self.presenter.dataSource forKey:@"new"];
                     [self.bookTableView reloadData];
-                });
                 break;
             }
             case Fail: {
                 NSLog(@"[info] ... Network Connect Failed");
-                NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"new"];
-                NSError *error = nil;
-                
-                NSArray<Book *> *object = [NSKeyedUnarchiver unarchivedObjectOfClasses:[[NSSet alloc] initWithObjects:NSArray.self, Book.self, nil] fromData:data error:&error];
-                
-                if (error) {
-                    NSLog(@"%@", error.localizedDescription);
-                    return;
-                }
-                [self.presenter.dataSource setArray:object];
+                NSArray *cachedData = [CachingManager.sharedInstance unarchivedObjectOfClasses:[[NSSet alloc] initWithObjects:NSArray.self, Book.self, nil] forKey:@"new"];
+                if (cachedData == nil) return;
+                [self.presenter.dataSource setArray:cachedData];
                 [self.bookTableView reloadData];
 
                 break;

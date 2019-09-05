@@ -11,4 +11,25 @@
 
 @implementation DetailBook
 
+- (nonnull id)copyWithZone:(nullable NSZone *)zone {
+    DetailBook *newDetailBook = [[[self class] allocWithZone:zone] init];
+    newDetailBook.authors = self.authors;
+    newDetailBook.publisher = self.publisher;
+    newDetailBook.desc = self.desc;
+    newDetailBook.isbn10 = self.isbn10;
+    newDetailBook.language = self.language;
+    newDetailBook.error = self.error;
+    newDetailBook.pages = self.pages;
+    newDetailBook.rating = self.rating;
+    newDetailBook.year = self.year;
+    newDetailBook.title = self.title;
+    newDetailBook.subtitle = self.subtitle;
+    newDetailBook.isbn13 = self.isbn13;
+    newDetailBook.price = self.price;
+    newDetailBook.url = self.url;
+    newDetailBook.image = self.image;
+    newDetailBook.imageData = self.imageData;
+    return newDetailBook;
+}
+
 @end

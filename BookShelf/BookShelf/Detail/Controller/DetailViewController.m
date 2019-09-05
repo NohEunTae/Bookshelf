@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import "NetworkManager.h"
 #import "DetailBook.h"
+#import "CachingManager.h"
 #import "DetailBookPresenter.h"
 
 @interface DetailViewController ()
@@ -57,14 +58,21 @@
     [NetworkManager.sharedInstance requestGetWithUrl:url with:nil withCompletionBlock:^(NetworkResult result, id  _Nonnull data) {
         switch (result) {
             case Success: {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    self.presenter.dataSource = [[DetailBook alloc] initWithDictionary:data];                    
-                    [self.detailBookTableView reloadData];
-                });
+                self.presenter.dataSource = [[DetailBook alloc] initWithDictionary:data];
+                [self.detailBookTableView reloadData];
+                [CachingManager.sharedInstance archivedDataWithRootObject:self.presenter.dataSource forKey:self.isbn13];
                 break;
             }
             case Fail: {
                 NSLog(@"[info] ... Network Connect Failed");
+                DetailBook *cachedData = [CachingManager.sharedInstance unarchivedObjectOfClass:DetailBook.self forKey:self.isbn13];
+                
+                if (cachedData != nil) {
+                    self.presenter.dataSource = [cachedData copy];
+                    
+                    NSLog(@"엥 : %@", cachedData.image);
+                    [self.detailBookTableView reloadData];
+                }
                 break;
             }
         }

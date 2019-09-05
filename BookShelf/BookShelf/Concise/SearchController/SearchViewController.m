@@ -11,6 +11,7 @@
 #import "NetworkManager.h"
 #import "DetailViewController.h"
 #import "Book.h"
+#import "CachingManager.h"
 
 @interface SearchViewController () <TableViewPresenterDelegate, PagingTableViewPresenterDelegate, UISearchBarDelegate>
 
@@ -64,46 +65,28 @@
     [NetworkManager.sharedInstance requestGetWithUrl:totalUrl with:nil withCompletionBlock:^(NetworkResult result, id  __nullable data) {
         switch (result) {
             case Success: {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    if (data == nil) return;
-                    NSArray<NSDictionary *> *bookDic = data[@"books"];
-                    for (int i = 0; i < bookDic.count; i++) {
-                        [self.presenter.dataSource addObject: [[Book alloc] initWithDictionary:bookDic[i]]];
-                    }
-                    [self.indicator stopAnimating];
-                    [self.searchResultTableView setContentOffset:self.searchResultTableView.contentOffset animated:NO];
-                    [self.searchResultTableView reloadData];
-                    
-                    NSError *error = nil;
-                    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.presenter.dataSource requiringSecureCoding:YES error:&error];
-                    
-                    if (error) {
-                        NSLog(@"%@", error.localizedDescription);
-                    }
-                    
-                    [[NSUserDefaults standardUserDefaults] setObject:data forKey:totalUrl];
-                    [[NSUserDefaults standardUserDefaults] synchronize];
-                    if (completionBlock != nil) completionBlock();
-                });
+                if (data == nil) return;
+                NSArray<NSDictionary *> *bookDic = data[@"books"];
+                for (int i = 0; i < bookDic.count; i++) {
+                    [self.presenter.dataSource addObject: [[Book alloc] initWithDictionary:bookDic[i]]];
+                }
+                [self.indicator stopAnimating];
+                [self.searchResultTableView setContentOffset:self.searchResultTableView.contentOffset animated:NO];
+                [self.searchResultTableView reloadData];
+                [CachingManager.sharedInstance archivedDataWithRootObject:self.presenter.dataSource forKey:totalUrl];
+                if (completionBlock != nil) completionBlock();
                 break;
             }
             case Fail: {
                 NSLog(@"[info] ... Network Connect Failed");
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:totalUrl];
-                    NSError *error = nil;
-                    
-                    NSArray<Book *> *object = [NSKeyedUnarchiver unarchivedObjectOfClasses:[[NSSet alloc] initWithObjects:NSArray.self, Book.self, nil] fromData:data error:&error];
-                    
-                    if (error) {
-                        NSLog(@"%@", error.localizedDescription);
-                        return;
-                    }
-                    [self.indicator stopAnimating];
-                    [self.presenter.dataSource addObjectsFromArray:object];
-                    [self.searchResultTableView reloadData];
-                    if (completionBlock != nil) completionBlock();
-                });
+                NSArray *cachedData = [CachingManager.sharedInstance unarchivedObjectOfClasses:[[NSSet alloc] initWithObjects:NSArray.self, Book.self, nil] forKey:totalUrl];
+                
+                if (cachedData == nil) return;
+
+                [self.indicator stopAnimating];
+                [self.presenter.dataSource addObjectsFromArray:cachedData];
+                [self.searchResultTableView reloadData];
+                if (completionBlock != nil) completionBlock();
                 break;
             }
         }
